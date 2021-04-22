@@ -119,7 +119,7 @@ app.use((request,response) => {
     response.status(404).json({error: 'Not Found'})
 })
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 //Al ser asincrono, levanta el servidor de esa forma, usando un cb
 app.listen(PORT, ()=> {
 
